@@ -27,4 +27,20 @@ public class Army {
     public Soldier getFrontman() {
         return soldiers.get(0);
     }
+
+    public void fight(Army defense) {
+        if (compareWeapons(this, defense)) {
+            loseFrontman(defense);
+        } else {
+            loseFrontman(this);
+        }
+    }
+
+    public boolean compareWeapons(Army attack, Army defense) {
+        return attack.getFrontman().getWeapon().getAmount() >= defense.getFrontman().getWeapon().getAmount();
+    }
+
+    public void loseFrontman(Army army) {
+        army.soldiers.remove(army.getFrontman());
+    }
 }

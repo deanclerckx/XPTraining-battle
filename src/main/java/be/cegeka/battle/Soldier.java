@@ -38,15 +38,6 @@ public final class Soldier {
 
     }
 
-    public Soldier valtAan(Soldier soldier) {
-        if (soldier.getWeapon().getAmount() > this.getWeapon().getAmount()) {
 
-            return soldier;
-        }
-
-        return this;
-
-
-    }
 }
 

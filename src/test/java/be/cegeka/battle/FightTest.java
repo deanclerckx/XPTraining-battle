@@ -12,7 +12,7 @@ public class FightTest {
         Soldier brit = new Soldier("Harold");
         duitser.addWeapon("BareFist");
         brit.addWeapon("Sword");
-        Soldier winner = duitser.valtAan(brit);
+        Soldier winner = duitser.attacks(brit);
         assertThat(winner.getName()).isEqualTo(brit.getName());
 
     }
