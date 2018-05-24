@@ -1,20 +1,41 @@
 package be.cegeka.battle;
 
-import org.apache.commons.lang3.Validate;
-
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
-public class Soldier {
+import org.apache.commons.lang3.Validate;
 
-    private String name;
+public final class Soldier {
+
+    private final String name;
+
+
+    private Weapon weapon = new Weapon("Bare fist");
 
     public Soldier(String name) {
         Validate.isTrue(isNotBlank(name));
-
         this.name = name;
     }
 
-    String getName() {
+
+    public String getName() {
         return this.name;
     }
+
+    public Weapon getWeapon() {
+        return this.weapon;
+    }
+
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+
+    public void addWeapon(String weapon1) {
+
+        Weapon weapon = new Weapon(weapon1);
+        this.setWeapon(weapon);
+
+    }
 }
+
