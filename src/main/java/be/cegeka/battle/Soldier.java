@@ -37,5 +37,16 @@ public final class Soldier {
         this.setWeapon(weapon);
 
     }
+
+    public Soldier valtAan(Soldier soldier) {
+        if (soldier.getWeapon().getAmount() > this.getWeapon().getAmount()) {
+
+            return soldier;
+        }
+
+        return this;
+
+
+    }
 }
 
