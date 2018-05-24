@@ -38,7 +38,7 @@ public final class Soldier {
 
     }
 
-    public Soldier valtAan(Soldier soldier) {
+    public Soldier attacks(Soldier soldier) {
         if (soldier.getWeapon().getAmount() > this.getWeapon().getAmount()) {
 
             return soldier;
@@ -48,5 +48,7 @@ public final class Soldier {
 
 
     }
+
+
 }
 
