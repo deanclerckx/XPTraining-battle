@@ -33,7 +33,7 @@ public class WarTest {
     public void fightTest() {
         War war = new War(armyBelgium, armyGermany);
         war.fight();
-        Assertions.assertThat(war.getAttack().getFrontman()).isNotEqualTo(armyBelgium.getFrontman());
+        Assertions.assertThat(war.getAttack().getSoldiers()).isEmpty();
     }
 
 }
