@@ -31,15 +31,8 @@ public class SoldierTest {
     @Test
     public void construction_ASoldierMustHaveAWeapon() {
         Soldier soldier = new Soldier("name");
-        soldier.addWeapon("Bare fist");
-        assertThat(soldier.getWeapon().getType()).isEqualTo("Bare fist");
-    }
-
-    @Test
-    public void construction_WeaponMustHaveAType() {
-        Soldier soldier = new Soldier("name");
-
-        assertThat(soldier.getWeapon().getType()).isEqualTo("Bare fist");
+        soldier.setWeapon(new BareFist());
+        assertThat(soldier.getWeapon()).isNotNull();
     }
 
 }

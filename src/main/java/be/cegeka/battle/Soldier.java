@@ -9,7 +9,7 @@ public final class Soldier {
     private final String name;
 
 
-    private Weapon weapon = new Weapon("Bare fist");
+    private Weapon weapon = new BareFist();
 
     public Soldier(String name) {
         Validate.isTrue(isNotBlank(name));
@@ -28,14 +28,6 @@ public final class Soldier {
 
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
-    }
-
-
-    public void addWeapon(String weapon1) {
-
-        Weapon weapon = new Weapon(weapon1);
-        this.setWeapon(weapon);
-
     }
 
     public Soldier attacks(Soldier soldier) {

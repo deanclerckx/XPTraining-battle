@@ -14,8 +14,8 @@ public class WarTest {
     public void setUp() {
         Soldier soldierJef = new Soldier("Jef");
         Soldier soldierHans = new Soldier("Hans");
-        soldierJef.addWeapon("Bare fist");
-        soldierHans.addWeapon("Axe");
+        soldierJef.setWeapon(new BareFist());
+        soldierHans.setWeapon(new Axe());
         armyBelgium = new Army();
         armyGermany = new Army();
         armyBelgium.enrollSoldier(soldierJef);

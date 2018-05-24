@@ -10,8 +10,8 @@ public class FightTest {
     public void soldierFight() {
         Soldier duitser = new Soldier("Jef");
         Soldier brit = new Soldier("Harold");
-        duitser.addWeapon("BareFist");
-        brit.addWeapon("Sword");
+        duitser.setWeapon(new BareFist());
+        brit.setWeapon(new Sword());
         Soldier winner = duitser.attacks(brit);
         assertThat(winner.getName()).isEqualTo(brit.getName());
 

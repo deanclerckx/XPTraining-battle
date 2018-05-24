@@ -1,43 +1,28 @@
 package be.cegeka.battle;
 
-public class Weapon {
-
-    private String type;
-
-    private int amount;
+public abstract class Weapon {
 
 
-    public Weapon(String type) {
-        this.type = type;
+    public Weapon() {
 
-        switch (type) {
-            case "Axe":
-                amount = 3;
-                break;
-
-            case "Sword":
-                amount = 2;
-                break;
-            case "Spear":
-                amount = 2;
-                break;
-            case "BareFist":
-                amount = 1;
-                break;
-            default:
-
-        }
-
-    }
-
-    public String getType() {
-        return this.type;
     }
 
     public int getAmount() {
-        return this.amount;
+        return amount;
+    }
+
+    public void setDamage(int amount) {
 
     }
 
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    private int amount;
+
+    public int checkOpponentsWeaponDamage(Soldier soldier) {
+        return 1;
+    }
 
 }
